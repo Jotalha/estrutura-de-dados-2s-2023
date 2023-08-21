@@ -5,7 +5,7 @@ int main()
 {
     char *array[] = {"texto", "J", "EDA"};
     int tamanho = sizeof(array) / sizeof(array[0]);
-    char *busca = "EDA";
+    char *busca = "EDO";
     int resultado;
 
     for (int i = 0; i < tamanho; i++)
