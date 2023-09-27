@@ -2,24 +2,27 @@
 #include <stdlib.h>
 #include "bubble_sort.h"
 
-void imprimir_arr(int arr[], int n){
+void imprimir_arr(int arr[], int n)
+{
     printf("\n");
-    for(int i =0; i<n; i++){
-        printf("%d - ",arr[i]);
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d - ", arr[i]);
     }
-     printf("\n");
+    printf("\n");
 }
 
-int main(int argc, char* argv[]){
-    int arr_inteiros[argc]; 
+int main(int argc, char *argv[])
+{
+    int arr_inteiros[argc - 1];
 
-    for(int i=0; i < argc; i++){
+    for (int i = 0; i < argc; i++)
+    {
 
-       arr_inteiros[i] = atoi(argv[i+1]);
+        arr_inteiros[i] = atoi(argv[i + 1]);
     }
 
-    
-    int n = sizeof(arr_inteiros)/sizeof(int);
+    int n = sizeof(arr_inteiros) / sizeof(int);
 
     imprimir_arr(arr_inteiros, n);
 
