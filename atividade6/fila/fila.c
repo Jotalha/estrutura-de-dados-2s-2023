@@ -18,6 +18,7 @@ Cliente *registrar(Fila *F)
     printf("Digite o nome do cliente: ");
     scanf("%s", o->nome);
     o->posicao = F->quantidade_clientes + 1;
+
     return o;
 }
 
@@ -54,3 +55,47 @@ Cliente *desenfileirar(Fila *F)
 
     return o;
 }
+
+/*void consultar_pos(Fila *F)
+{
+
+    if (F->quantidade_clientes == 0)
+    {
+        printf("A fila esta vazia\n\n");
+    }
+
+    Cliente *c = F->inicio;
+    char nomeC[50];
+
+    printf("Digite o nome do cliente: ");
+    scanf("%s", nomeC);
+
+    int quant = F->quantidade_clientes;
+
+    printf("\nQuantidade clientes na fila %d\n", quant);
+
+    do
+    {
+        printf("Entrou no Do While\n");
+
+        if (c == NULL)
+        {
+            printf("O cliente %s nao esta na fila\n\n", nomeC);
+            break;
+        }
+
+        if (strcmp(c->nome, nomeC) == 0)
+        {
+            printf("O cliente %s esta na posicao: %d\n\n", nomeC, c->posicao);
+        }
+        else
+        {
+            c = c->cliente_anterior;
+        }
+
+        quant--;
+
+    } while (strcmp(c->nome, nomeC) != 0 && quant != 0);
+
+    printf("Consultar concluida\n");
+}*/
