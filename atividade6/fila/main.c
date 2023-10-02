@@ -15,8 +15,8 @@ int main(int argc, char *argv[])
         printf("Digite a opcao desejada: \n");
         printf("\t1 - Registrar cliente na fila \n");
         printf("\t2 - Chamar o proximo cliente \n");
-        // printf("\t3 - Consultar a posicao de um cliente \n");
-        printf("\t3 - Limpar a fila \n");
+         printf("\t3 - Consultar a posicao de um cliente \n");
+        printf("\t4 - Limpar a fila \n");
         printf("\t0 - Fechar menu \n");
 
         scanf("%d", &opt);
@@ -44,12 +44,12 @@ int main(int argc, char *argv[])
             }
         }
         break;
-        /*case 3:
+        case 3:
         {
             consultar_pos(F);
         }
-        break;*/
-        case 3:
+        break;
+        case 4:
         {
             Cliente *o = NULL;
             do

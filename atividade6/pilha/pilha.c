@@ -10,15 +10,25 @@ Pilha *pilha()
     return p1;
 }
 
-void empilhar(Palavra *o, Pilha *P)
+Ponto *registrar_coord(){
+    Ponto *x = (Ponto *)malloc(sizeof(Ponto));
+    printf("Aponte a coordenada (x): ");
+    scanf("%d", x->x);
+    printf("Aponte a coordenada (y): ");
+    scanf("%d", x->y);
+    
+    return x;
+}
+
+void empilhar(Ponto *o, Pilha *P)
 {
-    printf("Empilhando: %c\n", o->valor);
-    o->proximo_palavra = P->topo;
+    printf("Empilhando: (%d, %d)\n", o->x, o->y);
+    o->proximo_ponto = P->topo;
     P->topo = o;
     P->quantidade++;
 }
 
-Palavra *desempilhar(Pilha *P)
+Ponto *desempilhar(Pilha *P)
 {
     if (P->quantidade == 0)
     {
@@ -26,9 +36,8 @@ Palavra *desempilhar(Pilha *P)
         return NULL;
     }
 
-    Palavra *o = P->topo;
-    printf("Desempilhando: %c\n", o->valor);
-    P->topo = o->proximo_palavra;
+    Ponto *o = P->topo;
+    P->topo = o->proximo_ponto;
     P->quantidade--;
     return o;
 }

@@ -5,15 +5,44 @@
 int main(int argc, char *argv[])
 {
 
-    Palavra o1, o2;
+    /*Ponto *p1;
+    Ponto *p2;
+    Ponto *p3;
+    Ponto *p4;
 
-    Palavra *o;
-    o1.valor = 'a';
-    o2.valor = 'b';
-
+    p1->x = 1;
+    p1->y = 2;
+    p2->x = 3;
+    p2->y = 4;
+    p3->x = 5;
+    p3->y = 6;
+    p4->x = 7;
+    p4->y = 8;*/
     Pilha *P = pilha();
-    empilhar(&o1, P);
-    empilhar(&o2, P);
+
+    int opt =0;
+
+    /*do{
+        printf("\t1 - Registrar coordenada (x, y) \n");
+        scanf("%d", opt);
+
+        switch (opt)
+        {
+        case 1:{
+            printf("Entrou no case 1");*/
+            Ponto *ponto = registrar_coord();
+            empilhar(ponto, P);/*
+        }
+             code 
+            break;
+        
+        default:
+            break;
+        }
+
+    }while(opt != 0);*/
+
+    Ponto *o;
 
     do
     {
@@ -21,7 +50,7 @@ int main(int argc, char *argv[])
 
         if (o != NULL)
         {
-            printf("Valor desempilhado: %c\n", o->valor);
+            printf("Coordenada desempilhada: (%d, %d)\n", o->x, o->y);
         }
     } while (o != NULL);
 
