@@ -13,9 +13,9 @@ Pilha *pilha()
 Ponto *registrar_coord(){
     Ponto *x = (Ponto *)malloc(sizeof(Ponto));
     printf("Aponte a coordenada (x): ");
-    scanf("%d", x->x);
+    scanf("%d", &x->x);
     printf("Aponte a coordenada (y): ");
-    scanf("%d", x->y);
+    scanf("%d", &x->y);
     
     return x;
 }

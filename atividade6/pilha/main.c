@@ -18,7 +18,11 @@ int main(int argc, char *argv[])
         case 1:{
             printf("Entrou no case 1");*/
             Ponto *ponto = registrar_coord();
-            empilhar(ponto, P);/*
+            empilhar(ponto, P);
+            Ponto *ponto2 = registrar_coord();
+            empilhar(ponto2, P);
+            Ponto *ponto3 = registrar_coord();
+            empilhar(ponto3, P);/*
         }
              code 
             break;
