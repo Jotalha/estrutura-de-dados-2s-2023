@@ -5,19 +5,6 @@
 int main(int argc, char *argv[])
 {
 
-    /*Ponto *p1;
-    Ponto *p2;
-    Ponto *p3;
-    Ponto *p4;
-
-    p1->x = 1;
-    p1->y = 2;
-    p2->x = 3;
-    p2->y = 4;
-    p3->x = 5;
-    p3->y = 6;
-    p4->x = 7;
-    p4->y = 8;*/
     Pilha *P = pilha();
 
     int opt =0;
