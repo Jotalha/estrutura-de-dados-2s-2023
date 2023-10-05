@@ -16,4 +16,4 @@ Fila *fila();
 Cliente *registrar();
 void enfileirar(Cliente *o, Fila *F);
 Cliente *desenfileirar(Fila *F);
-// void consultar_pos(Fila *F);
+void consultar_pos(Fila *F);

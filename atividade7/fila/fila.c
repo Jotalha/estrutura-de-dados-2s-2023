@@ -56,6 +56,38 @@ Cliente *desenfileirar(Fila *F)
     return o;
 }
 
+void consultar_pos(Fila *F){
+    if (F->quantidade_clientes == 0)
+    {
+        printf("A fila esta vazia\n\n");
+    }
+
+    char nomeC[50];
+
+    printf("Digite o nome do cliente: ");
+    scanf("%s", nomeC);
+
+
+    Fila *filaCpy = F;
+    int quantFila = filaCpy->quantidade_clientes;
+
+    if(strcmp(filaCpy->inicio->nome, nomeC) == 0)
+        {
+            printf("O cliente %s esta na posicao: %d\n\n", nomeC, filaCpy->inicio->posicao);
+        }
+    else{
+        do{
+            desenfileirar(filaCpy);
+            if(strcmp(filaCpy->inicio->nome, nomeC) == 0)
+        {
+            printf("O cliente %s esta na posicao: %d\n\n", nomeC, filaCpy->inicio->posicao);
+        }
+        quantFila--;
+        }while(strcmp(filaCpy->inicio->nome, nomeC) == 0 || quantFila > 0);
+    }
+    
+}
+
 /*void consultar_pos(Fila *F)
 {
 
