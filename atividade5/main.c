@@ -46,37 +46,4 @@ int main(int argc, char *argv[])
     fclose(f);
 
     return 0;
-
-    /*   FILE *fp;
-
-       fp = fopen(argv[1], "r");
-
-       int quant = 0;
-
-       char txt[100];
-       while (!feof(fp))
-       {
-           fgets(txt, 100, fp);
-           printf("%s\n", txt);
-           quant++;
-       }
-
-       bubble_sort(txt, quant);
-
-       FILE *f;
-
-       f = fopen("arq_palavras_ordenado.txt", "w");
-       if (f == NULL)
-       {
-           perror("Nao foi possivel abrir o arquivo");
-           exit(1);
-       }
-
-       fscanf(fp, "%s", txt);
-
-       fclose(fp);
-
-       fclose(f);
-
-       exit(0);*/
 }
